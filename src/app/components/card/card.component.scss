@@ -1,0 +1,92 @@
+@import '../../styles/typography.scss';
+
+.wrapper {
+  position: relative;
+  opacity: 1;
+  transition: opacity .5s;
+
+  &:hover .thumbnail {
+    transform: scale(1.2);
+  }
+
+  &.fade {
+    opacity: 0;
+  }
+
+  &.enlarge {
+    .publish-date, .description, .title-wrapper {
+      opacity: 0;
+    }
+  }
+}
+
+.thumbnail-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 15.6vw;
+  width: 100%;
+  position: relative;
+  background: #000;
+  transition: transform .5s ease-out, width .5s ease-out, height .5s ease-out;
+}
+
+@media (max-width: 1023px) {
+  .thumbnail-wrapper {
+    height: 23.7vw;
+  }
+}
+
+@media (max-width: 674px) {
+  .thumbnail-wrapper {
+    height: 50vw;
+  }
+}
+
+.thumbnail {
+  width: 100%;
+  will-change: transform;
+  transition: transform .75s ease-out;
+}
+
+.title-wrapper {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, .5);
+  width: 100%;
+  display: flex;
+  padding: 1.3em;
+  align-items: flex-end;
+  opacity: 1;
+  transition: opacity .5s;
+}
+
+.title {
+  @include title;
+  flex: 1;
+}
+
+.play-icon {
+  width: 2.8em;
+  height: 2.8em;
+  margin-left: 1.3em;
+}
+
+.publish-date {
+  @include subtitle;
+  margin-top: 1em;
+  opacity: 1;
+  transition: opacity .5s;
+}
+
+.description {
+  @include copy;
+  margin-top: .6em;
+  line-height: 1.4em;
+  height: 7em;
+  overflow: hidden;
+  width: 100%;
+  opacity: 1;
+  transition: opacity .5s;
+}

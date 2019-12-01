@@ -1,0 +1,15 @@
+<div class="wrapper" [ngClass]="{ fadeOut: leaving }" *ngIf="video$ | async; let video; else notFound">
+  <mp-video class="video" [video]="video" (videoLoaded)="videoReady()"></mp-video>
+  <div class="info" [ngClass]="{ ready: ready && !leaving }">
+    <div class="title">{{ video.title }}</div>
+    <div class="publish-date">Published on {{ video.publishedDate | date }}</div>
+    <div class="description">{{ video.description }}</div>
+    <div class="link-wrapper" (click)="goToList()">
+      <img width="14" height="14" src="assets/img/icons/back_arrow.svg">
+      <span class="link">Back to list</span>
+    </div>
+  </div>
+</div>
+<ng-template #notFound>
+  <div class="not-found">Video not found</div>
+</ng-template>

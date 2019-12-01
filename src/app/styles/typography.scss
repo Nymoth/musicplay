@@ -1,0 +1,22 @@
+@import 'colors.scss';
+
+@mixin title {
+  color: $turquoise;
+  font-family: 'Alfa Slab One', cursive;
+  font-size: 1.6em;
+}
+
+@mixin subtitle {
+  color: $quartz;
+  font-size: 1.3em;
+}
+
+@mixin copy {
+  color: $steel;
+  font-size: 1.2em;
+}
+
+@mixin link {
+  color: $turquoise;
+  font-size: 1.3em;
+}

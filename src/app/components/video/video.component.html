@@ -1,0 +1,10 @@
+<iframe
+  class="frame"
+  [ngClass]="{ fadeIn: ready }"
+  (load)="videoReady()"
+  [src]="url"
+  frameborder="0"
+  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen>
+</iframe>
+<img [src]="placeholder" class="frame placeholder" [ngClass]="{ fadeOut: ready }">

@@ -1,0 +1,27 @@
+:host {
+  display: grid;
+  grid-template-columns: repeat(3, 27.8vw);
+  column-gap: 2.7em;
+  row-gap: 2.7em;
+}
+
+@media (max-width: 1023px) {
+  :host {
+    grid-template-columns: repeat(2, 42.1vw);
+  }
+}
+
+@media (max-width: 674px) {
+  :host {
+    grid-template-columns: 100%;
+  }
+}
+
+.card {
+  opacity: 0;
+  transition: opacity .25s;
+
+  &.fadeIn {
+    opacity: 1;
+  }
+}

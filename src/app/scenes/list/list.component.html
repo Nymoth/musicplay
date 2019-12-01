@@ -1,0 +1,8 @@
+<mp-card
+  *ngFor="let video of videos$ | async; trackBy: idTracker"
+  [video]="video"
+  [transition]="transition"
+  (click)="goToVideo(video)"
+  class="card fadeIn">
+</mp-card>
+<div #scrollPoint></div>

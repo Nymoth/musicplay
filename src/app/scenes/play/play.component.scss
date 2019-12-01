@@ -1,0 +1,78 @@
+@import '../../styles/typography.scss';
+
+.wrapper {
+  display: flex;
+  opacity: 1;
+  transition: opacity .25s ease-out;
+
+  &.fadeOut {
+    opacity: 0;
+  }
+}
+
+.video {
+  width: 58.4vw;
+  height: 32.7vw;
+}
+
+.info {
+  flex: 1;
+  margin: 0 0 0 2.6em;
+  transform: translate(-2em, 0);
+  opacity: 0;
+  transition: transform .25s ease-in, opacity .25s ease-in;
+
+  &.ready {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 870px) {
+  .wrapper {
+    flex-flow: column;
+  }
+
+  .video {
+    width: 100%;
+    height: 50vw;
+  }
+
+  .info {
+    margin: 2.2em 0 0;
+    transform: translate(0, -2em);
+  }
+}
+
+.title {
+  @include title;
+}
+
+.publish-date {
+  @include subtitle;
+  margin-top: 1.1em;
+}
+
+.description {
+  @include copy;
+  margin-top: .6em;
+  line-height: 1.4em;
+  max-height: 7em;
+  overflow: hidden;
+}
+
+.link-wrapper {
+  margin-top: 2.6em;
+}
+
+.link {
+  @include link;
+  margin-left: 1.2em;
+  vertical-align: top;
+}
+
+.not-found {
+  @include subtitle;
+  text-align: center;
+  width: 100%;
+}
