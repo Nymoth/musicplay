@@ -8,6 +8,8 @@ import { PlayComponent } from './scenes/play/play.component';
 import { ListComponent } from './scenes/list/list.component';
 import { VideoComponent } from './components/video/video.component';
 import { CardComponent } from './components/card/card.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { CardComponent } from './components/card/card.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
