@@ -31,6 +31,7 @@ export class CardComponent implements OnInit, OnChanges {
     // TODO: create config.scss with global spacing and layout sizing values,
     // expose them with :export and read them where needed in js
     // Also move this to a separate method.
+    // This doesn't work with ivy.. maybe try with native angular animations
 
     if (this.transition && this.transition === this.video.id) {
       const { x, y } = this._elementRef.nativeElement.getBoundingClientRect();

@@ -14,7 +14,14 @@
   }
 }
 
-.placeholder {
+.placeholder-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  background: #000;
   position: absolute;
   left: 0;
   top: 0;
@@ -25,4 +32,8 @@
   &.fadeOut {
     opacity: 0;
   }
+}
+
+.placeholder {
+  width: 100%;
 }

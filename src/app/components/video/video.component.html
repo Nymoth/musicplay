@@ -7,4 +7,6 @@
   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
   allowfullscreen>
 </iframe>
-<img [src]="placeholder" class="frame placeholder" [ngClass]="{ fadeOut: ready }">
+<div class="placeholder-wrapper" [ngClass]="{ fadeOut: ready }">
+  <img [src]="placeholder" class="placeholder">
+</div>

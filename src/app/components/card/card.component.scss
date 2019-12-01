@@ -5,10 +5,6 @@
   opacity: 1;
   transition: opacity .5s;
 
-  &:hover .thumbnail {
-    transform: scale(1.2);
-  }
-
   &.fade {
     opacity: 0;
   }
@@ -30,6 +26,12 @@
   position: relative;
   background: #000;
   transition: transform .5s ease-out, width .5s ease-out, height .5s ease-out;
+}
+
+@media (min-width: 1024px) {
+  .wrapper:hover .thumbnail {
+    transform: scale(1.2);
+  }
 }
 
 @media (max-width: 1023px) {
